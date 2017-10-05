@@ -54,7 +54,7 @@
                     e.preventDefault();
                     var text = $(".getaddress").find('*[name=content]').val();
                     // var replace = "[0-9]+.*("+ds+")";
-                    var replace = "(\\d+).+";
+                    var replace = "(\\d+).*(HCM|SÀI GÒN|HN|HỒ CHÍ MINH|TPHCM|AG|BV|BL|BT|BD|BĐ|PT|CM|CB)";
                     var pattern = new RegExp(replace,"g");
 
                     var address = text.match(pattern);
