@@ -2,29 +2,48 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <script src="js/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
         <style>
-            .getaddress{
+            .content{
+                left: 25%;
+            }
+            .content .getaddress{
                 width: 100%;
             }
-            .getaddress textarea{
+            .content .getaddress textarea{
                 padding-bottom: 120px;
-                width: 30%;
+                width: 100%;
             }
-            .result{
+            .content .getaddress .btn-group{
+                float: right;
+            }
+            .content .result{
                 font-size: 24px;
                 font-weight: 600;
+            }
+            .col-md-12 h2{
+                text-align: center;
+                font-weight: 700;
             }
         </style>
     </head>
     <body>
-        <h2>Lấy địa chỉ từ dữ liệu text</h2>
-        <div>
-            <form class="getaddress" action="">
-                <textarea name="content" placeholder="Bạn nhập dữ liệu"></textarea>
-                <input type="submit" name="" placeholder="Lấy">
-            </form>
-            <div class="result"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Lấy địa chỉ từ dữ liệu text</h2>
+                </div>
+                <div class="col-md-6 content">
+                    <form class="getaddress" action="">
+                        <textarea name="content" placeholder="Bạn nhập dữ liệu"></textarea>
+                        <div class="btn-toolbar btn-group">
+                            <button type="button" class="btn btn-primary btnget">Lấy</button>
+                        </div>
+                    </form>
+                    <div class="result"></div>
+                </div>
+            </div>
         </div>
         <script>
             // var ds = "";
