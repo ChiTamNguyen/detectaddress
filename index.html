@@ -3,9 +3,22 @@
     <head>
         <meta charset="utf-8">
         <script src="js/jquery-3.2.1.min.js"></script>
+        <style>
+            .getaddress{
+                width: 100%;
+            }
+            .getaddress textarea{
+                padding-bottom: 120px;
+                width: 30%;
+            }
+            .result{
+                font-size: 24px;
+                font-weight: 600;
+            }
+        </style>
     </head>
     <body>
-        <h2>Lay dia chi tu du lieu text nhap</h2>
+        <h2>Lấy địa chỉ từ dữ liệu text</h2>
         <div>
             <form class="getaddress" action="">
                 <textarea name="content" placeholder="Bạn nhập dữ liệu"></textarea>
@@ -23,7 +36,7 @@
                     // var replace = "[0-9]+.*("+ds+")";
                     var replace = "(\\d+).+?(?=\\.\\s)";
                     var pattern = new RegExp(replace,"g");
-                    
+
                     var address = text.match(pattern);
                     
                     $('.result').html(address);
