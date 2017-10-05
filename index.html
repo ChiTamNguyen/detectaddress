@@ -21,8 +21,9 @@
                     e.preventDefault();
                     var text = $(this).find('*[name=content]').val();
                     // var replace = "[0-9]+.*("+ds+")";
-                    var replace = "(\d+).+?(?=\.\s)";
+                    var replace = "(\\d+).+?(?=\\.\\s)";
                     var pattern = new RegExp(replace,"g");
+                    alert(pattern)
                     var address = text.match(pattern);
                     
                     $('.result').html(address);
