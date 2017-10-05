@@ -14,9 +14,9 @@
             <div class="result"></div>
         </div>
         <script>
-            var ds = "";
-            $.get('dstinhthanh.txt', function(data) {
-                ds = data;
+            // var ds = "";
+            // $.get('dstinhthanh.txt', function(data) {
+            //     ds = data;
                 $(".getaddress").on("submit", function(e){
                     e.preventDefault();
                     var text = $(this).find('*[name=content]').val();
@@ -28,7 +28,7 @@
                     
                     $('.result').html(address);
                 });
-            }, 'text');
+            // }, 'text');
         </script>
     </body>
 </html>
