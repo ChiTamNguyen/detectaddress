@@ -49,9 +49,9 @@
             // var ds = "";
             // $.get('dstinhthanh.txt', function(data) {
             //     ds = data;
-                $(".getaddress").on("submit", function(e){
+                 $(".btnget").on("click", function(e){
                     e.preventDefault();
-                    var text = $(this).find('*[name=content]').val();
+                    var text = $(".getaddress").find('*[name=content]').val();
                     // var replace = "[0-9]+.*("+ds+")";
                     var replace = "(\\d+).+?(?=\\.\\s)";
                     var pattern = new RegExp(replace,"g");
