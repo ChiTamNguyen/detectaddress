@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="js/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <h2>Lay dia chi tu du lieu text nhap</h2>
+        <div>
+            <form class="getaddress" action="">
+                <textarea name="content" placeholder="Bạn nhập dữ liệu"></textarea>
+                <input type="submit" name="" placeholder="Lấy">
+            </form>
+            <div class="result"></div>
+        </div>
+        <script>
+            var ds = "";
+            $.get('dstinhthanh.txt', function(data) {
+                ds = data;
+                $(".getaddress").on("submit", function(e){
+                    e.preventDefault();
+                    var text = $(this).find('*[name=content]').val();
+                    // var replace = "[0-9]+.*("+ds+")";
+                    var replace = "(\d+).+?(?=\.\s)";
+                    var pattern = new RegExp(replace,"g");
+                    alert(pattern)
+                    var address = text.match(pattern);
+                    
+                    $('.result').html(address);
+                });
+            }, 'text');
+        </script>
+    </body>
+</html>
