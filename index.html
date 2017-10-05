@@ -52,7 +52,7 @@
             //     ds = data;
                  $(".btnget").on("click", function(e){
                     e.preventDefault();
-                    var text = $(".getaddress").find('*[name=content]').val();
+                    var text = $(".getaddress").find('*[name=content]').val().toUpperCase();
                     // var replace = "[0-9]+.*("+ds+")";
                     var replace = "(\\d+).*(HCM|SÀI GÒN|HN|HỒ CHÍ MINH|TPHCM|AG|BV|BL|BT|BD|BĐ|PT|CM|CB)";
                     var pattern = new RegExp(replace,"g");
